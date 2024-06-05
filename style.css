@@ -391,3 +391,120 @@ div.about img {
 .btn-catalag:hover {
     background-color: #555;
 }
+
+@media screen and (max-width: 1025px) {
+    header {
+        
+       
+        width: 80vw;
+        position: fixed;
+        left: 50%;
+       
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 2px;
+        gap: 3px;
+        z-index: 2;
+    }
+
+    .list-header {
+        display: none;
+    }
+
+    div.about img {
+        height: 380px;
+        margin-bottom: 10px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .content {
+        display: none;
+    }
+
+
+    .container {
+        display: none;
+    }
+
+    .sobre-section {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    div.about, div.team {
+        width: 100%; /* Ajuste para largura total */
+        max-width: none; /* Remover largura máxima */
+    }
+
+    .card {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Layout flexível */
+        grid-gap: 10px; /* Espaçamento entre os itens */
+    }
+
+    .grid-item {
+        width: calc(100% - 0.9rem); /* 2 colunas, com margem entre elas */
+        max-width: 900px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        
+       
+        width: 80vw;
+        position: fixed;
+        left: 50%;
+       
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 2px;
+        gap: 3px;
+        z-index: 2;
+    }
+
+    .list-header {
+        display: none;
+    }
+
+    div.about img {
+        height: 380px;
+        margin-bottom: 10px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .content {
+        display: none;
+    }
+
+
+    .container {
+        display: none;
+    }
+
+    .sobre-section {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    div.about, div.team {
+        width: 100%; /* Ajuste para largura total */
+        max-width: none; /* Remover largura máxima */
+    }
+
+    .card {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Layout flexível */
+        grid-gap: 10px; /* Espaçamento entre os itens */
+    }
+
+    .grid-item {
+        width: calc(100% - 0.9rem); /* 2 colunas, com margem entre elas */
+        max-width: 900px;
+    }
+}
+
+    
+    
