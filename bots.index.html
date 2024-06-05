@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Bots</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+ 
+        <h1>Catálogo de Bots</h1>
+        <nav class="tab-nav">
+            <button class="tablink" onclick="openTab(event, 'police')">Polícia</button>
+            <button class="tablink" onclick="openTab(event, 'firefighter')">Bombeiro</button>
+            <button class="tablink" onclick="openTab(event, 'faction')">Facção</button>
+            <div class="tab-underline"></div>
+        </nav>
+    
+    <section class="catalog-section">
+        <div id="police" class="tabcontent">
+            <!-- Conteúdo da aba Polícia -->
+            <h2>Polícia</h2>
+            <p>Aqui você encontrará bots relacionados à Polícia.</p>
+        </div>
+
+        <div id="firefighter" class="tabcontent">
+            <!-- Conteúdo da aba Bombeiro -->
+            <h2>Bombeiro</h2>
+            <p>Aqui você encontrará bots relacionados aos Bombeiros.</p>
+        </div>
+
+        <div id="faction" class="tabcontent">
+            <!-- Conteúdo da aba Facção -->
+            <h2>Facção</h2>
+            <p>Aqui você encontrará bots relacionados às Facções.</p>
+        </div>
+    </section>
+
+    <footer>
+        <!-- Aqui você pode adicionar o rodapé do seu site -->
+    </footer>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+
+            // Esconde todos os conteúdos da aba
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Remove a classe "active" de todos os links da aba
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+
+            // Mostra o conteúdo da aba selecionada e marca o link da aba como ativo
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.classList.add("active");
+
+            // Move a barra de tinta animada para a aba selecionada
+            var underline = document.querySelector('.tab-underline');
+            underline.style.left = evt.currentTarget.offsetLeft + 'px';
+            underline.style.width = evt.currentTarget.offsetWidth + 'px';
+        }
+    </script>
+</body>
+</html>

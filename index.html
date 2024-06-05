@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h2>CYBERTECH</h2>
+        <nav>
+            <ul class="list-header">
+                <a >Inicio</a>
+                <a href="#sobre">Sobre</a>
+                <li>Catálogo</li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="container">
+        <div class="list">
+            <div class="item active">
+                <div class="car-img">
+                    <img class="rob" src="./assets/robo.png" alt="">
+                </div>
+                <div class="content">
+                    <p class="bot-information">CYBERTECH</p>
+                    <h2>BOTS DISCORD</h2>
+                    <p class="description">Um bot para Discord é uma ferramenta automatizada que executa diversas
+                        funções em um servidor, como moderação, tocar música, organizar eventos e fornecer informações.
+                        Eles ajudam a gerenciar comunidades, automatizando tarefas repetitivas e melhorando a
+                        experiência dos usuários.</p>
+                    <button class="information">Saiba Mais</button>
+                </div>
+            </div>
+
+
+
+            <div class="item">
+                <div class="car-img">
+                    <img class="rob" src="./assets/computador.png" alt="">
+                </div>
+                <div class="content">
+                    <p class="bot-information">CYBERTECH</p>
+                    <h2>SISTEMAS WEB</h2>
+                    <p class="description">
+                        Sistemas web são aplicações acessíveis via navegador que permitem realizar diversas funções
+                        online, como compras, gestão de dados, comunicação e entretenimento. Eles facilitam o acesso a
+                        informações e serviços de qualquer lugar, melhorando a eficiência e a conveniência para os
+                        usuários.
+
+
+
+                    </p>
+                    <button class="information">Saiba Mais</button>
+                </div>
+            </div>
+
+
+
+            <div class="item">
+                <div class="car-img">
+                    <img class="rob" src="./assets/olho.png" alt="">
+                </div>
+                <div class="content">
+                    <p class="bot-information">CYBERTECH</p>
+                    <h2>DESIGNS E SITES</h2>
+                    <p class="description">O design de sites envolve a criação e a organização visual de páginas web
+                        para torná-las atraentes e funcionais. O design de um servidor Discord envolve a organização e
+                        personalização das categorias, canais, permissões e visuais para criar um ambiente atraente e
+                        funcional.</p>
+                    <button class="information">Saiba Mais</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="arrows">
+            <button onclick="btnPrev()" id="prev" class="btn"><img onclick="btnPrev()" src="./assets/arrow.png"
+                    alt="seta Esquerda"></button>
+            <button onclick="btnNext()" id="next" class="btn"><img onclick="btnNext()" src="./assets/arrow.png"
+                    alt="seta Direita"></button>
+        </div>
+
+        <div class="indicators">
+            <div class="number">01</div>
+            <ul>
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+
+    </section>
+
+    <section id="sobre" class="sobre-section">
+        <div class="about">
+            <img src="./assets/Design sem nome (3).png" alt="">
+        </div>
+        <div class="team">
+            <h2>Nosso Projeto</h2>
+            <p>Cybertech é uma loja especializada para a comunidade de FiveM, focada em facções e organizações dentro do jogo. Oferecemos uma ampla variedade de produtos e serviços que melhoram a experiência de jogo e facilitam a gestão de comunidades no Discord. Nosso objetivo é fornecer soluções inovadoras e de alta qualidade para jogadores e administradores, garantindo uma experiência mais envolvente e eficiente.</p>
+            <div class="card">
+                <div class="grid-item">
+                    <img class="icon" src="./assets/icons8-cliente-64.png" alt="">
+                    <p>+10 Clientes</p>
+                </div>
+                <div class="grid-item">
+                    <img class="icon" src="./assets/icons8-cliente-windows-64.png" alt="">
+                    <p>+10 Sistemas</p>
+                </div>
+                <div class="grid-item">
+                    <img class="icon" src="./assets/icons8-bot-64.png" alt="">
+                    <p>+30 Bots</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="catalog-section">
+        <h2>Confira nosso catálogo de produtos</h2>
+        <p>Explore nossa ampla variedade de produtos e serviços</p>
+        <a target="_blank" href="index1.html" class="btn-catalag">Veja o Catálogo</a>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

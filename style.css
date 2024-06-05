@@ -1,0 +1,393 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+    list-style-type: none;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-size: 16px;
+   overflow-x: hidden;
+}
+
+header {
+    width: 80vw;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 600px;
+    gap: 100px;
+    z-index: 2;
+
+
+
+
+}
+
+
+.list-header {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+}
+
+.container {
+    background-image: radial-gradient(#7f3d9e, #6d00d9);
+    height: 100vh;
+    position: relative;
+
+    & .list {
+        width: 70vw;
+        margin: auto;
+        height: 100%;
+        position: relative;
+
+        & .item {
+            position: absolute;
+            inset: 0;
+          
+
+            & .car-img {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 70%;
+
+
+                & img {
+                    width: 100%;
+                    transform: rotate(-30deg);
+
+
+                }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    background-color: rgba(0, 0, 0, 0.315);
+                    width: 100%;
+                    height: 100px;
+                    top: 80%;
+                    left: 50px;
+                    border: 50%;
+                    filter: blur(50px);
+                }
+
+            }
+
+            & .content {
+                position: absolute;
+                right: 100px;
+                width: 70%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: end;
+                gap: 20px;
+
+
+                & .bot-information {
+                    font-weight: bold;
+                }
+
+                & h2 {
+                    font-size: 8em;
+                    line-height: 1em;
+                    padding-bottom: 20px;
+                    font-family: "League Gothic", sans-serif;
+                }
+
+                & .description {
+                    color: white;
+                    font-size: 12px;
+                    text-align: right;
+                    max-width: 400px;
+                }
+
+                & .information {
+                    border-radius: 30px;
+                    height: 35px;
+                    width: 120px;
+                    text-transform: uppercase;
+                    border: 2px solid purple;
+                    background-color: #beff1b;
+                    color: black;
+                    cursor: pointer;
+                    font-weight: bold;
+                    font-family: "League Gothic", sans-serif;
+
+                }
+
+            }
+        }
+
+        &::before {
+            content: "";
+
+            position: absolute;
+            height: 200px;
+            width: 100%;
+            top: 50%;
+            border-top: 1px solid #fff;
+        }
+
+    }
+
+
+
+    .indicators {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 200px;
+        width: 90vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        gap: 15px;
+
+        & .number {
+            font-size: 5em;
+            font-family: "League Gothic", sans-serif;
+        }
+
+        & ul {
+            display: flex;
+            gap: 10px;
+           
+
+            & li {
+                width: 50px;
+                height: 5px;
+                background-color: #beff1b;
+                border-radius: 5px;
+                transition: 0.5s;
+            }
+
+            & .active {
+                background-color: #fff;
+            }
+        }
+ 
+    }
+
+    .arrows {
+        width: 70vw;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: flex;
+        justify-content: space-between;
+        transform: translate(-50%, -25px);
+
+        & button:nth-child(1) {
+            & img {
+                transform: scale(-1);
+            }
+        }
+
+
+        & button {
+            top: 60%;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+
+            & img {
+                width: 30px;
+                margin-top: 4px;
+                cursor: pointer;
+            }
+
+            &:hover {
+                background-color: #beff1b;
+                cursor: pointer;
+            }
+
+        }
+    }
+
+}
+
+.container{
+
+    & .list {
+        --calculation: 1;
+        & .item {
+            transform: translateX(calc(100vw * var(--calculation)));
+            transition: 0.5s;
+            opacity: 0;
+
+            & .car-img {
+                & img {
+                    transform: rotate(0);
+                    transition: 0.8s;
+                    transition-delay: 0.3s;
+
+                }
+            }
+
+            & .content {
+
+                & .bot-information,
+                h2,
+                .description,
+                .information {
+                    transform: translateX(calc(200px * var(--calculation)));
+                    transition: 0.7s;
+                    transition-delay: 0.3s;
+                
+                }
+
+                & h2 {
+                    transition-delay: 0.5s;
+                }
+
+                & .description {
+                    transition-delay: 0.7s;
+                }
+
+
+                & .information {
+                    transition-delay: 0.9s;
+                }
+            }
+        }
+
+
+
+
+
+        & .active {
+            opacity: 1;
+            transform: translateX(0);
+            transition: 0.5s;
+
+            & .car-img {
+                & img {
+                    transform: rotate(-20deg);
+                   
+
+                }
+            }
+
+            & .content {
+
+                & .bot-information,
+                h2,
+                .description,
+                .information {
+                    transform: translateX(0);
+
+
+                }
+
+
+            }
+        }
+    }
+}
+
+.sobre-section {
+    height: 70vh;
+    background-image: radial-gradient(#3f3f3f, #202020);
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem;
+}
+
+
+ div.team {
+    
+    color: rgb(255, 255, 255);
+   
+    border-radius: 8px;
+   
+    width: 45%;
+}
+
+div.about {
+    width: 250px;
+    color: black;
+    
+    border-radius: 8px;
+    width: 45%;
+}
+
+div.about img {
+    height: 600px;
+    margin: 0;
+    padding: 0;
+}
+
+
+.card {
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-gap: 40px;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+ 
+   
+}
+
+.list-header a {
+    text-decoration: none;
+    color: white;
+}
+
+.grid-item {
+    background-color: #1a1a1a;
+    width: 130px;
+    height: 130px;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    align-items: center;
+    font-size: 15px;
+    box-shadow: 2px 9px 19px rgba(68, 0, 124, 0.377);
+}
+
+.grid-item img {
+    width: 50px; /* Defina o tamanho da imagem conforme necessário */
+    margin-bottom: 5px;
+}
+.catalog-section {
+    text-align: center;
+    padding: 50px 0;
+    background-image: radial-gradient(#7f3d9e, #6d00d9);
+}
+
+.catalog-section h2 {
+    margin-bottom: 20px;
+}
+
+.catalog-section p {
+    margin-bottom: 40px;
+}
+
+.btn-catalag {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #beff1b;
+    color: rgb(32, 32, 32);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-catalag:hover {
+    background-color: #555;
+}
